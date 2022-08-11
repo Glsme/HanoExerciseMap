@@ -28,8 +28,11 @@ class ViewController: UIViewController {
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(region, animated: true)
         
-//        let annotation = MKPointAnnotation()
-//        annotation
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = center
+        annotation.title = "산책하기 좋은 장소"
+        
+        mapView.addAnnotation(annotation)
     }
 }
 
